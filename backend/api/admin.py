@@ -21,7 +21,7 @@ class VerticalProductInline(admin.TabularInline):
     def has_add_permission(self, request, obj=None):
         return False
 
-@admin.register(Vertical)
+@admin.register(Vertical, site=westend_admin_site)
 class VerticalAdmin(admin.ModelAdmin):
     list_display = ['title', 'image', 'is_active', 'order', 'created_at']
     list_filter = ['is_active']
@@ -65,7 +65,7 @@ class FeaturedProductFilter(admin.SimpleListFilter):
         if self.value() == 'no':
             return queryset.filter(is_featured=False)
 
-@admin.register(Product)
+@admin.register(Product, site=westend_admin_site)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug', 'vertical', 'badge', 'stock_status', 'is_active', 'is_featured', 'featured_order']
     list_filter = ['vertical', 'stock_status', 'is_active', 'badge', FeaturedProductFilter]
@@ -124,27 +124,27 @@ class ProductAdmin(admin.ModelAdmin):
     fast_delete_products.short_description = "Fast Delete (Avoids 502 Timeout)"
 
 
-@admin.register(ContactInquiry)
+@admin.register(ContactInquiry, site=westend_admin_site)
 class ContactInquiryAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'company', 'is_read', 'created_at']
     list_filter = ['is_read', 'created_at']
     search_fields = ['name', 'email', 'company', 'message']
     readonly_fields = ['created_at']
 
-@admin.register(QuoteRequest)
+@admin.register(QuoteRequest, site=westend_admin_site)
 class QuoteRequestAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'product', 'is_processed', 'created_at']
     list_filter = ['is_processed', 'created_at']
     search_fields = ['name', 'email', 'company']
     readonly_fields = ['created_at']
 
-@admin.register(Feature)
+@admin.register(Feature, site=westend_admin_site)
 class FeatureAdmin(admin.ModelAdmin):
     list_display = ['title', 'icon_name', 'order', 'is_active']
     list_filter = ['is_active']
     search_fields = ['title', 'description']
 
-@admin.register(CompanyInfo)
+@admin.register(CompanyInfo, site=westend_admin_site)
 class CompanyInfoAdmin(admin.ModelAdmin):
     list_display = ['name', 'tagline', 'logo_preview', 'use_video_logo']
     readonly_fields = ['logo_preview_large', 'video_preview']
@@ -190,7 +190,7 @@ class CompanyInfoAdmin(admin.ModelAdmin):
     video_preview.short_description = 'Video Preview'
 
 
-@admin.register(PageVisit)
+@admin.register(PageVisit, site=westend_admin_site)
 class PageVisitAdmin(admin.ModelAdmin):
     list_display = ['page', 'action', 'product', 'ip_address', 'referrer', 'timestamp']
     list_filter = ['page', 'action', 'timestamp']
@@ -199,20 +199,11 @@ class PageVisitAdmin(admin.ModelAdmin):
     date_hierarchy = 'timestamp'
     ordering = ['-timestamp']
 
+@admin.register(Brochure, site=westend_admin_site)
 class BrochureAdmin(admin.ModelAdmin):
     list_display = ['title', 'is_active', 'created_at']
     list_filter = ['is_active', 'created_at']
     search_fields = ['title']
-
-# Register models with custom admin site
-westend_admin_site.register(Vertical, VerticalAdmin)
-westend_admin_site.register(Product, ProductAdmin)
-westend_admin_site.register(ContactInquiry, ContactInquiryAdmin)
-westend_admin_site.register(QuoteRequest, QuoteRequestAdmin)
-westend_admin_site.register(Feature, FeatureAdmin)
-westend_admin_site.register(CompanyInfo, CompanyInfoAdmin)
-westend_admin_site.register(PageVisit, PageVisitAdmin)
-westend_admin_site.register(Brochure, BrochureAdmin)
 
 # Register Django's default User and Group models
 westend_admin_site.register(User, UserAdmin)
