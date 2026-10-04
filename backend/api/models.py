@@ -32,14 +32,14 @@ class Feature(models.Model):
 
 class CompanyInfo(models.Model):
     """Company information for the About section"""
-    name = models.CharField(max_length=200, default='Westend Corporation')
+    name = models.CharField(max_length=200, default='Acornpensy Exports')
     tagline = models.CharField(max_length=200, default='Premium Food Products')
     founded_year = models.IntegerField(default=2010)
     description = models.TextField()
     short_description = models.TextField()
     headquarters = models.CharField(max_length=200, default='Delhi, India')
-    phone = models.CharField(max_length=50, default='+91 93119 33481')
-    email = models.CharField(max_length=100, default='support@westendcorporation.in')
+    phone = models.CharField(max_length=50, default='+91 9599042226')
+    email = models.CharField(max_length=100, default='Export@acornpensy.com')
     
     # Logo fields
     logo_image = models.ImageField(
@@ -200,7 +200,7 @@ class Product(models.Model):
     storage = models.CharField(max_length=200, default='Cool & Dry Place', help_text="Storage instructions")
     certifications = models.CharField(max_length=200, blank=True, help_text="e.g., 'FSSAI, Organic India, USDA'")
     features = models.TextField(blank=True, help_text="Product features, one per line")
-    brand = models.CharField(max_length=100, default='Westend Organic', help_text="Brand name")
+    brand = models.CharField(max_length=100, default='Acornpensy Organic', help_text="Brand name")
     is_active = models.BooleanField(default=True)
     
     # New flag for Catalog-Only products (Hidden from website)

@@ -40,67 +40,45 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold text-primary-500 mb-4">
-              Westend Corporation
+              Acornpensy Exports
             </h3>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              Your trusted partner for premium quality groceries, frozen vegetables, and processed foods since 2010.
+              Your trusted partner for premium quality groceries, frozen vegetables, and processed foods since 2014.
             </p>
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-start">
                 <MapPin className="mr-2 flex-shrink-0 mt-1 text-primary-500" size={16} />
-                <a
-                  href="https://www.google.com/maps/place/Westend+corporation/@28.5420132,77.2756653,383m/data=!3m1!1e3!4m10!1m2!2m1!1sX-57+Phase-II+Okhla,+Delhi+110020!3m6!1s0x390ce30010f472fb:0x1456fe72f05194a7!8m2!3d28.5420132!4d77.2780471!15sCiFYLTU3IFBoYXNlLUlJIE9raGxhLCBEZWxoaSAxMTAwMjCSAQl3YXJlaG91c2WqAWIKDS9nLzExaDJkNnJueXkQASoIIgR4IDU3KAAyHxABIhvY5h26iiHHI4RCMG_ABwDAu3WfLw6-2GboZKsyJBACIiB4IDU3IHBoYXNlIGlpIG9raGxhIGRlbGhpIDExMDAyMOABAA!16s%2Fg%2F11w7fmnqrq?hl=en&entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary-400 transition-colors"
-                >
-                  X-57 Phase-II Okhla, Delhi 110020
-                </a>
+                <span className="hover:text-primary-400 transition-colors">
+                  B-106, Phase-1, Okhla, New Delhi 110020
+                </span>
               </div>
               <div className="flex items-center">
                 <Phone className="mr-2 flex-shrink-0 text-primary-500" size={16} />
                 <a
-                  href="tel:+919311933481"
+                  href="tel:+919599042226"
                   className="hover:text-primary-400 transition-colors"
                 >
-                  +91 93119 33481
+                  +91 9599042226
                 </a>
               </div>
               <div className="flex items-center">
                 <Mail className="mr-2 flex-shrink-0 text-primary-500" size={16} />
                 <a
-                  href="mailto:support@westendcorporation.in"
+                  href="mailto:Export@acornpensy.com"
                   className="hover:text-primary-400 transition-colors"
                 >
-                  support@westendcorporation.in
+                  Export@acornpensy.com
                 </a>
               </div>
             </div>
             
-            {/* Social Media Links */}
-            <div className="mt-6">
+            {/* Social Media Links - Coming Soon */}
+            {/* <div className="mt-6">
               <h5 className="text-sm font-semibold text-white mb-3">Follow Us</h5>
               <div className="flex space-x-4">
-                <a
-                  href="https://www.instagram.com/westendcorporation"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full hover:bg-primary-600 transition-colors duration-300 group"
-                  aria-label="Follow us on Instagram"
-                >
-                  <Instagram size={18} className="text-gray-400 group-hover:text-white transition-colors" />
-                </a>
-                <a
-                  href="https://www.facebook.com/westendcorporation"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full hover:bg-primary-600 transition-colors duration-300 group"
-                  aria-label="Follow us on Facebook"
-                >
-                  <Facebook size={18} className="text-gray-400 group-hover:text-white transition-colors" />
-                </a>
+                Social media links coming soon
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Company Links */}
@@ -180,30 +158,13 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              © {currentYear} Westend Corporation Pvt. Ltd. All rights reserved.
+              © {currentYear} Acornpensy Exports Pvt Ltd. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
-              {/* Social Media Links */}
-              <div className="flex space-x-3 mr-6">
-                <a
-                  href="https://www.instagram.com/westendcorporation"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-primary-400 transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={18} />
-                </a>
-                <a
-                  href="https://www.facebook.com/westendcorporation"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-primary-400 transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook size={18} />
-                </a>
-              </div>
+              {/* Social Media Links - Coming Soon */}
+              {/* <div className="flex space-x-3 mr-6">
+                Social media coming soon
+              </div> */}
               <div className="flex space-x-6 text-sm text-gray-500">
                 <a href="/privacy" className="hover:text-primary-400 transition-colors">Privacy Policy</a>
                 <a href="/terms" className="hover:text-primary-400 transition-colors">Terms of Service</a>

@@ -5,15 +5,15 @@ import { Helmet } from 'react-helmet-async'
  * SEO component for managing page meta tags and structured data
  */
 const SEO = ({
-    title = 'Westend Corporation - Premium International Food Exporter | USA, Canada & Worldwide',
-    description = 'Leading international food exporter from India. Shipping to USA, Canada & worldwide. FSSAI certified. Premium groceries, pulses, spices & frozen vegetables. B2B bulk orders. Competitive export pricing since 2010.',
-    keywords = 'Westend Corporation, Westend Corporation India, Westend Corporation Delhi, Westend Foods, Westend Exports, Westend Corporation products, Westend Corporation reviews, food exporters, food exporters India, food exports, worldwide food exporter, international food exporter, global food exporters, food export company, Indian food exporters, food exporters to USA, food exporters to Canada, food exporters worldwide, bulk food exporters, wholesale food exporters, organic food exporters, B2B food exporters, FSSAI certified exporters, spices exporters, pulses exporters, frozen vegetables exporters',
-    ogImage = 'https://westendcorporation.in/og-image.jpg',
+    title = 'Acornpensy Exports - Premium International Food Exporter | USA, Canada & Worldwide',
+    description = 'Leading international food exporter from India. Shipping to USA, Canada & worldwide. FSSAI certified. Premium groceries, pulses, spices & frozen vegetables. B2B bulk orders. Competitive export pricing since 2014.',
+    keywords = 'Acornpensy Exports, Acornpensy Exports India, Acornpensy Exports Delhi, Acornpensy Foods, Acornpensy, food exporters, food exporters India, food exports, worldwide food exporter, international food exporter, global food exporters, food export company, Indian food exporters, food exporters to USA, food exporters to Canada, food exporters worldwide, bulk food exporters, wholesale food exporters, organic food exporters, B2B food exporters, FSSAI certified exporters, spices exporters, pulses exporters, frozen vegetables exporters',
+    ogImage = 'https://acornpensy.com/og-image.jpg',
     ogType = 'website',
     structuredData = null,
     canonical = null
 }) => {
-    const siteUrl = 'https://westendcorporation.in'
+    const siteUrl = 'https://acornpensy.com'
     const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : siteUrl)
 
     return (
@@ -31,7 +31,7 @@ const SEO = ({
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
             <meta property="og:image" content={ogImage} />
-            <meta property="og:site_name" content="Westend Corporation" />
+            <meta property="og:site_name" content="Acornpensy Exports" />
 
             {/* Twitter */}
             <meta property="twitter:card" content="summary_large_image" />
@@ -43,7 +43,7 @@ const SEO = ({
             {/* Additional SEO Meta Tags */}
             <meta name="robots" content="index, follow" />
             <meta name="language" content="English" />
-            <meta name="author" content="Westend Corporation" />
+            <meta name="author" content="Acornpensy Exports" />
             <meta name="geo.region" content="IN-DL" />
             <meta name="geo.placename" content="Delhi" />
 
@@ -63,25 +63,25 @@ export default SEO
 export const getOrganizationSchema = () => ({
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Westend Corporation",
-    "url": "https://westendcorporation.in",
+    "name": "Acornpensy Exports",
+    "url": "https://acornpensy.com",
     "logo": {
         "@type": "ImageObject",
-        "url": "https://westendcorporation.in/logo.png"
+        "url": "https://acornpensy.com/logo.png"
     },
     "description": "Premium international food exporter from India",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "X-57 Phase-II Okhla",
-        "addressLocality": "Delhi",
+        "streetAddress": "B-106, Phase-1, Okhla",
+        "addressLocality": "New Delhi",
         "postalCode": "110020",
         "addressCountry": "IN"
     },
     "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+91-93119-33481",
+        "telephone": "+91-9599042226",
         "contactType": "Customer Service",
-        "email": "support@westendcorporation.in"
+        "email": "Export@acornpensy.com"
     }
 })
 
@@ -89,20 +89,20 @@ export const getOrganizationSchema = () => ({
 export const getWebSiteSchema = () => ({
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Westend Corporation",
-    "alternateName": "Westend Foods & Exports",
-    "url": "https://westendcorporation.in",
+    "name": "Acornpensy Exports",
+    "alternateName": "Acornpensy Foods & Exports",
+    "url": "https://acornpensy.com",
     "potentialAction": {
         "@type": "SearchAction",
         "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://westendcorporation.in/products?search={search_term_string}"
+            "urlTemplate": "https://acornpensy.com/products?search={search_term_string}"
         },
         "query-input": "required name=search_term_string"
     },
     "about": {
         "@type": "Organization",
-        "name": "Westend Corporation"
+        "name": "Acornpensy Exports"
     }
 })
 
@@ -115,7 +115,7 @@ export const getProductSchema = (product) => {
     if (product.image) {
         const mainImage = product.image.startsWith('http')
             ? product.image
-            : `https://westendcorporation.in${product.image}`
+            : `https://acornpensy.com${product.image}`
         productImages.push(mainImage)
     }
 
@@ -123,14 +123,14 @@ export const getProductSchema = (product) => {
     if (product.image_2) {
         const image2 = product.image_2.startsWith('http')
             ? product.image_2
-            : `https://westendcorporation.in${product.image_2}`
+            : `https://acornpensy.com${product.image_2}`
         productImages.push(image2)
     }
 
     if (product.image_3) {
         const image3 = product.image_3.startsWith('http')
             ? product.image_3
-            : `https://westendcorporation.in${product.image_3}`
+            : `https://acornpensy.com${product.image_3}`
         productImages.push(image3)
     }
 
@@ -144,14 +144,14 @@ export const getProductSchema = (product) => {
         "description": product.description || `International bulk exporter of ${product.name}. Premium quality, FSSAI certified. Exporting to USA, Canada, and worldwide. Minimum order quantity: ${product.moq || 'Contact for details'}. Contact for competitive export pricing.`,
         "brand": {
             "@type": "Brand",
-            "name": product.brand || "Westend Organic"
+            "name": product.brand || "Acornpensy Organic"
         },
         "category": product.vertical_name || "Food Products",
         "sku": `WC-${product.id}`,
         "mpn": `WC-${product.id}`,
         "manufacturer": {
             "@type": "Organization",
-            "name": "Westend Corporation",
+            "name": "Acornpensy Exports",
             "description": "Leading International Food Exporter - Shipping to USA, Canada & Worldwide"
         },
         "offers": {
@@ -161,7 +161,7 @@ export const getProductSchema = (product) => {
             "priceCurrency": "USD",
             "priceValidUntil": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
             "itemCondition": "https://schema.org/NewCondition",
-            "url": `https://westendcorporation.in/product/${product.slug}`,
+            "url": `https://acornpensy.com/product/${product.slug}`,
             "priceSpecification": {
                 "@type": "UnitPriceSpecification",
                 "priceType": "https://schema.org/InvoicePrice",
@@ -194,9 +194,9 @@ export const getProductSchema = (product) => {
             ],
             "seller": {
                 "@type": "Organization",
-                "name": "Westend Corporation - International Food Exporter",
-                "description": "Premium food exporter to USA, Canada, and worldwide markets since 2010",
-                "url": "https://westendcorporation.in",
+                "name": "Acornpensy Exports - International Food Exporter",
+                "description": "Premium food exporter to USA, Canada, and worldwide markets since 2014",
+                "url": "https://acornpensy.com",
                 "address": {
                     "@type": "PostalAddress",
                     "addressCountry": "IN",
@@ -264,7 +264,7 @@ export const getFAQSchema = (product) => ({
             "name": `Do you export ${product.name} to USA and Canada?`,
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": `Yes, we export ${product.name} to USA, Canada, and worldwide markets. Westend Corporation is a leading international food exporter with FSSAI certification and export-quality packaging.`
+                "text": `Yes, we export ${product.name} to USA, Canada, and worldwide markets. Acornpensy Exports is a leading international food exporter with FSSAI certification and export-quality packaging.`
             }
         },
         {

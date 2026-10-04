@@ -29,12 +29,12 @@ const AboutPage = () => {
   ]
 
   const milestones = [
-    { year: '2010', event: 'Company Founded', description: 'Started operations in Okhla, Delhi' },
-    { year: '2013', event: 'ISO Certification', description: 'Achieved ISO 22000 certification' },
-    { year: '2016', event: 'Organic Certified', description: 'Received USDA Organic certification' },
-    { year: '2019', event: 'Export Expansion', description: 'Expanded to 15+ countries' },
-    { year: '2023', event: 'Modern Facility', description: 'Opened state-of-the-art processing unit' },
-    { year: '2024', event: 'US Subsidiary - Chicago', description: 'Opened a subsidiary in Chicago, USA to better serve our North American customers and partners.' },
+    { year: '2014', event: 'Company Founded', description: 'Started export operations in Okhla, Delhi' },
+    { year: '2016', event: 'ISO Certification', description: 'Achieved ISO 22000 food safety certification' },
+    { year: '2018', event: 'Organic Certified', description: 'Received USDA Organic certification' },
+    { year: '2020', event: 'Export Expansion', description: 'Expanded to 15+ countries worldwide' },
+    { year: '2023', event: 'Modern Facility', description: 'Upgraded to state-of-the-art processing unit' },
+    { year: '2025', event: 'Global Expansion', description: 'Strengthened presence in international markets with focus on quality and sustainability' },
   ]
 
   const team = [
@@ -65,9 +65,9 @@ const AboutPage = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">About Westend Corporation</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">About Acornpensy Exports</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Leading the way in premium food products since 2010, serving businesses worldwide with excellence and integrity
+              Leading the way in premium food exports since 2014, serving businesses worldwide with excellence and integrity
             </p>
           </motion.div>
         </div>
@@ -103,19 +103,22 @@ const AboutPage = () => {
             <h2 className="text-4xl font-bold text-primary-900 mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Founded in 2010, Westend Corporation Pvt. Ltd. began with a simple mission: to provide
-                premium quality food products to businesses worldwide. What started as a small operation
-                in Delhi's Okhla Industrial Area has grown into a trusted name in the B2B food supply industry.
+                Founded in 2014, Acornpensy Exports Pvt Ltd began with a clear vision: to become a leading
+                exporter of premium quality organic food products to global markets. What started as a focused
+                export operation in Delhi's Okhla Industrial Area has grown into a trusted name in the international
+                food export industry.
               </p>
               <p>
-                Our journey has been marked by continuous innovation, unwavering commitment to quality,
-                and a deep respect for sustainable practices. We work directly with certified organic farms
-                and maintain state-of-the-art processing facilities that adhere to international standards.
+                Our journey has been defined by our commitment to quality, sustainability, and customer satisfaction.
+                We work directly with certified organic farms across India and maintain state-of-the-art processing
+                facilities that meet international food safety standards including FSSAI, ISO 22000, and USDA Organic
+                certifications.
               </p>
               <p>
-                Today, we serve over 500 clients across 15+ countries, offering a comprehensive range of
-                groceries, frozen vegetables, and processed foods. Our success is built on the trust of
-                our partners and the dedication of our team.
+                Today, Acornpensy Exports serves businesses across multiple continents, offering a comprehensive range of
+                organic groceries, spices, frozen vegetables, and processed foods. Our success is built on the trust of
+                our international partners and the dedication of our expert team who ensure every shipment meets the
+                highest quality standards.
               </p>
             </div>
           </motion.div>

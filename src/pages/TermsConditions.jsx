@@ -6,8 +6,8 @@ const TermsConditions = () => {
     return (
         <>
             <SEO
-                title="Terms & Conditions - Westend Corporation"
-                description="Terms and Conditions for Westend Corporation. Guidelines for B2B transactions, product information, and export services."
+                title="Terms & Conditions - Acornpensy Exports"
+                description="Terms and Conditions for Acornpensy Exports. Guidelines for B2B transactions, product information, and export services."
             />
             <div className="min-h-screen bg-gray-50 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
                 <motion.div
@@ -24,7 +24,7 @@ const TermsConditions = () => {
                         <section>
                             <h2 className="text-xl font-bold text-gray-800 mb-3">1. Scope of Services</h2>
                             <p>
-                                Westend Corporation Pvt. Ltd. operates this website (westendcorporation.in) as a B2B digital catalog and inquiry platform.
+                                Acornpensy Exports Pvt Ltd operates this website (acornpensy.com) as a B2B digital catalog and inquiry platform.
                                 We specialize in the export and wholesale supply of food products including groceries, spices, frozen vegetables, and processed foods.
                                 This website does not facilitate direct online retail transactions (e-commerce).
                             </p>
@@ -56,7 +56,7 @@ const TermsConditions = () => {
                         <section>
                             <h2 className="text-xl font-bold text-gray-800 mb-3">4. Intellectual Property</h2>
                             <p>
-                                All content on this site, including the Westend Corporation logo, product descriptions, and images, is the property of Westend Corporation Pvt. Ltd.
+                                All content on this site, including the Acornpensy Exports logo, product descriptions, and images, is the property of Acornpensy Exports Pvt Ltd.
                                 Unauthorized commercial use or reproduction of this content without express written permission is prohibited.
                             </p>
                         </section>
@@ -64,7 +64,7 @@ const TermsConditions = () => {
                         <section>
                             <h2 className="text-xl font-bold text-gray-800 mb-3">5. Limitation of Liability</h2>
                             <p>
-                                Westend Corporation shall not be liable for any direct, indirect, or consequential damages arising from the use of this website or reliance on the information provided herein.
+                                Acornpensy Exports shall not be liable for any direct, indirect, or consequential damages arising from the use of this website or reliance on the information provided herein.
                                 For specific product liability claims, the terms of the specific export contract shall prevail.
                             </p>
                         </section>
@@ -82,10 +82,10 @@ const TermsConditions = () => {
                                 For legal inquiries or questions regarding these terms, please contact us at:
                             </p>
                             <div className="mt-4 bg-gray-50 p-4 rounded-lg border border-gray-200">
-                                <p className="font-bold text-gray-900">Westend Corporation Pvt. Ltd.</p>
-                                <p>X-57 Phase-II Okhla Industrial Area</p>
-                                <p>New Delhi, Delhi 110020, India</p>
-                                <p className="mt-2"><span className="font-medium">Email:</span> support@westendcorporation.in</p>
+                                <p className="font-bold text-gray-900">Acornpensy Exports Pvt Ltd</p>
+                                <p>B-106, Phase-1, Okhla</p>
+                                <p>New Delhi 110020, India</p>
+                                <p className="mt-2"><span className="font-medium">Email:</span> Export@acornpensy.com</p>
                             </div>
                         </section>
                     </div>

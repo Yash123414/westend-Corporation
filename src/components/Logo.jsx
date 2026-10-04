@@ -34,7 +34,7 @@ const Logo = ({ className = 'h-12 w-auto', fallback = '/logo.png' }) => {
         return (
             <img
                 src={fallback}
-                alt="Westend Corporation"
+                alt="Acornpensy Exports"
                 className={className}
             />
         )
@@ -59,7 +59,7 @@ const Logo = ({ className = 'h-12 w-auto', fallback = '/logo.png' }) => {
                 {/* Fallback to image if video fails */}
                 <img
                     src={companyInfo.logo_image || fallback}
-                    alt="Westend Corporation"
+                    alt="Acornpensy Exports"
                     className={className}
                 />
             </video>
@@ -71,7 +71,7 @@ const Logo = ({ className = 'h-12 w-auto', fallback = '/logo.png' }) => {
         return (
             <img
                 src={companyInfo.logo_image}
-                alt="Westend Corporation"
+                alt="Acornpensy Exports"
                 className={className}
             />
         )
@@ -81,7 +81,7 @@ const Logo = ({ className = 'h-12 w-auto', fallback = '/logo.png' }) => {
     return (
         <img
             src={fallback}
-            alt="Westend Corporation"
+            alt="Acornpensy Exports"
             className={className}
         />
     )

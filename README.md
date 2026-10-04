@@ -1,6 +1,6 @@
-# Westend Corporation Website
+# Acornpensy Exports Website
 
-A modern, professional multi-page B2B e-commerce website for Westend Corporation Pvt. Ltd. featuring glassmorphism design, smooth animations, and Amazon-style product gallery.
+A modern, professional multi-page B2B e-commerce website for Acornpensy Exports Pvt Ltd featuring glassmorphism design, smooth animations, and Amazon-style product gallery.
 
 ## 🚀 Features
 
@@ -173,11 +173,11 @@ This is a modern React application built with best practices:
 
 ## 📄 License
 
-© 2024 Westend Corporation Pvt. Ltd. All rights reserved.
+© 2024 Acornpensy Exports Pvt Ltd. All rights reserved.
 
 ## 🤝 Contact
 
 For any queries regarding this website:
-- Email: support@westendcorporation.in
-- Phone: +91 XXX XXX XXXX
-- Address: B-106, Okhla Industrial Area, Phase 1, Delhi - 110020
+- Email: Export@acornpensy.com
+- Phone: +91 9599042226
+- Address: B-106, Phase-1, Okhla, New Delhi 110020

@@ -67,7 +67,7 @@ const Navbar = () => {
                 }`}
                 style={!isScrolled ? { textShadow: '0 2px 4px rgba(0,0,0,0.5)' } : {}}
               >
-                WESTEND CORPORATION
+                ACORNPENSY EXPORTS
               </span>
             </Link>
 
@@ -128,7 +128,7 @@ const Navbar = () => {
             {/* Right Icons */}
             <div className="hidden md:flex items-center gap-4">
               <a
-                href="https://wa.me/919311933481"
+                href="https://wa.me/919599042226"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center gap-2 font-medium transition-colors ${isScrolled
@@ -154,7 +154,7 @@ const Navbar = () => {
             {/* Mobile Actions */}
             <div className="flex md:hidden items-center gap-3">
               <a
-                href="https://wa.me/919311933481"
+                href="https://wa.me/919599042226"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center justify-center p-2 rounded-full transition-colors ${isScrolled

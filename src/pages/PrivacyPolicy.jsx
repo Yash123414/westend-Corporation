@@ -6,8 +6,8 @@ const PrivacyPolicy = () => {
     return (
         <>
             <SEO
-                title="Privacy Policy - Westend Corporation"
-                description="Privacy Policy for Westend Corporation. Learn how we collect, use, and protect your personal information for B2B inquiries and export services."
+                title="Privacy Policy - Acornpensy Exports"
+                description="Privacy Policy for Acornpensy Exports. Learn how we collect, use, and protect your personal information for B2B inquiries and export services."
             />
             <div className="min-h-screen bg-gray-50 pt-24 pb-16 px-4 sm:px-6 lg:px-8">
                 <motion.div
@@ -24,8 +24,8 @@ const PrivacyPolicy = () => {
                         <section>
                             <h2 className="text-xl font-bold text-gray-800 mb-3">1. Introduction</h2>
                             <p>
-                                Welcome to Westend Corporation ("we," "our," or "us"). As a leading B2B food exporter and wholesale supplier, we value the trust of our international partners and clients.
-                                This Privacy Policy outlines how we collect, use, and protect your information when you visit our website (westendcorporation.in) or engage with us for business inquiries.
+                                Welcome to Acornpensy Exports ("we," "our," or "us"). As a leading B2B food exporter and wholesale supplier, we value the trust of our international partners and clients.
+                                This Privacy Policy outlines how we collect, use, and protect your information when you visit our website (acornpensy.com) or engage with us for business inquiries.
                             </p>
                         </section>
 
@@ -82,11 +82,11 @@ const PrivacyPolicy = () => {
                                 For any privacy-related queries or to update your business details, please contact our administrative office:
                             </p>
                             <div className="mt-4 bg-gray-50 p-4 rounded-lg border border-gray-200">
-                                <p className="font-bold text-gray-900">Westend Corporation Pvt. Ltd.</p>
-                                <p>X-57 Phase-II Okhla Industrial Area</p>
-                                <p>New Delhi, Delhi 110020, India</p>
-                                <p className="mt-2"><span className="font-medium">Email:</span> support@westendcorporation.in</p>
-                                <p><span className="font-medium">Phone:</span> +91 93119 33481</p>
+                                <p className="font-bold text-gray-900">Acornpensy Exports Pvt Ltd</p>
+                                <p>B-106, Phase-1, Okhla</p>
+                                <p>New Delhi 110020, India</p>
+                                <p className="mt-2"><span className="font-medium">Email:</span> Export@acornpensy.com</p>
+                                <p><span className="font-medium">Phone:</span> +91 9599042226</p>
                             </div>
                         </section>
                     </div>

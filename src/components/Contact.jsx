@@ -76,25 +76,25 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '+91 93119 33481',
+      details: '+91 9599042226',
       color: 'from-amber-500 to-orange-600'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'support@westendcorporation.in',
+      details: 'Export@acornpensy.com',
       color: 'from-emerald-500 to-teal-600'
     },
     {
       icon: Globe,
       title: 'Website',
-      details: 'westendcorporation.in',
+      details: 'acornpensy.com',
       color: 'from-blue-500 to-indigo-600'
     },
     {
       icon: MapPin,
       title: 'Address',
-      details: 'X-57 Phase-II Okhla, Delhi 110020',
+      details: 'B-106, Phase-1, Okhla, New Delhi 110020',
       color: 'from-slate-500 to-blue-600'
     }
   ]
@@ -155,21 +155,21 @@ const Contact = () => {
                       <h3 className="font-semibold text-gray-800 mb-1">{info.title}</h3>
                       {info.title === 'Phone' ? (
                         <a
-                          href="tel:+919311933481"
+                          href="tel:+919599042226"
                           className="block font-medium text-gray-800 hover:text-primary-600 transition-colors text-sm md:text-base"
                         >
-                          +91 93119 33481
+                          +91 9599042226
                         </a>
                       ) : info.title === 'Email' ? (
                         <a
-                          href="mailto:support@westendcorporation.in"
+                          href="mailto:Export@acornpensy.com"
                           className="block font-medium text-gray-800 hover:text-primary-600 transition-colors text-sm md:text-base"
                         >
                           {info.details}
                         </a>
                       ) : info.title === 'Website' ? (
                         <a
-                          href="https://westendcorporation.in"
+                          href="https://acornpensy.com"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block font-medium text-gray-800 hover:text-primary-600 transition-colors text-sm md:text-base"
@@ -177,14 +177,9 @@ const Contact = () => {
                           {info.details}
                         </a>
                       ) : info.title === 'Address' ? (
-                        <a
-                          href="https://www.google.com/maps/place/Westend+corporation/@28.5420132,77.2756653,383m/data=!3m1!1e3!4m10!1m2!2m1!1sX-57+Phase-II+Okhla,+Delhi+110020!3m6!1s0x390ce30010f472fb:0x1456fe72f05194a7!8m2!3d28.5420132!4d77.2780471!15sCiFYLTU3IFBoYXNlLUlJIE9raGxhLCBEZWxoaSAxMTAwMjCSAQl3YXJlaG91c2WqAWIKDS9nLzExaDJkNnJueXkQASoIIgR4IDU3KAAyHxABIhvY5h26iiHHI4RCMG_ABwDAu3WfLw6-2GboZKsyJBACIiB4IDU3IHBoYXNlIGlpIG9raGxhIGRlbGhpIDExMDAyMOABAA!16s%2Fg%2F11w7fmnqrq?hl=en&entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-600 hover:text-primary-600 transition-colors text-sm md:text-base"
-                        >
+                        <span className="text-gray-600 text-sm md:text-base">
                           {info.details}
-                        </a>
+                        </span>
                       ) : (
                         <p className="text-gray-600">{info.details}</p>
                       )}
@@ -193,8 +188,8 @@ const Contact = () => {
                 </motion.div>
               ))}
 
-              {/* Social Media Links */}
-              <motion.div
+              {/* Social Media Links - Coming Soon */}
+              {/* <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -204,26 +199,9 @@ const Contact = () => {
                 <h5 className="text-lg font-semibold text-gray-900 mb-4">Connect With Us</h5>
                 <p className="text-gray-600 mb-4">Follow us on social media for updates, products, and news</p>
                 <div className="flex space-x-4">
-                  <a
-                    href="https://www.instagram.com/westendcorporation"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 group shadow-lg hover:shadow-xl transform hover:scale-105"
-                    aria-label="Follow us on Instagram"
-                  >
-                    <Instagram size={20} className="text-white" />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/westendcorporation"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 group shadow-lg hover:shadow-xl transform hover:scale-105"
-                    aria-label="Follow us on Facebook"
-                  >
-                    <Facebook size={20} className="text-white" />
-                  </a>
+                  Social media coming soon
                 </div>
-              </motion.div>
+              </motion.div> */}
 
               {/* Embedded Google Map - Satellite View */}
               <motion.div
@@ -234,8 +212,8 @@ const Contact = () => {
                 className="glass rounded-2xl overflow-hidden h-64"
               >
                 <iframe
-                  title="Westend Corporation Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d959.6654389648438!2d77.2780471!3d28.5420132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce30010f472fb%3A0x1456fe72f05194a7!2sWestend%20corporation!5e1!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  title="Acornpensy Exports Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5288!2d77.2756!3d28.5420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzMxLjIiTiA3N8KwMTYnMzIuMiJF!5e1!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="w-full h-full border-0"
