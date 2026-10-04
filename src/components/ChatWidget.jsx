@@ -154,12 +154,12 @@ const ChatWidget = () => {
         // Always show welcome message
         const welcomeMessage = {
           id: 'welcome-' + Date.now(),
-          content: "Hello! I'm your Westend Food Assistant. I can help you find the perfect organic food products, spices, grains, and more for your needs. What are you looking for today?",
+          content: "Hello! I'm your Acornpensy Food Assistant. I can help you find the perfect organic food products, spices, grains, and more for your needs. What are you looking for today?",
           message_type: 'bot',
           timestamp: new Date().toISOString(),
           response_data: {}
         };
-        
+
         if (history && history.length > 0) {
           setMessages([welcomeMessage, ...history]);
         } else {
@@ -170,7 +170,7 @@ const ChatWidget = () => {
         // Show welcome message even if history fails
         const welcomeMessage = {
           id: 'welcome-' + Date.now(),
-          content: "Hello! I'm your Westend Food Assistant. I can help you find the perfect organic food products, spices, grains, and more for your needs. What are you looking for today?",
+          content: "Hello! I'm your Acornpensy Food Assistant. I can help you find the perfect organic food products, spices, grains, and more for your needs. What are you looking for today?",
           message_type: 'bot',
           timestamp: new Date().toISOString(),
           response_data: {}
@@ -278,7 +278,7 @@ const ChatWidget = () => {
       setShowTicketForm(false);
       
     } catch (error) {
-      addBotMessage("Failed to create ticket. Please try again or contact us directly at support@westendcorporation.in");
+      addBotMessage("Failed to create ticket. Please try again or contact us directly at Export@acornpensy.com");
     }
   };
 
@@ -501,7 +501,7 @@ const ChatWidget = () => {
                 </motion.div>
                 <div>
                   <h3 className="font-bold text-base flex items-center gap-2">
-                    <span>Westend Food Assistant</span>
+                    <span>Acornpensy Food Assistant</span>
                     <motion.div
                       animate={{ opacity: [1, 0.5, 1] }}
                       transition={{ duration: 2, repeat: Infinity }}

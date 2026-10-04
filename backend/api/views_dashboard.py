@@ -33,8 +33,8 @@ def admin_dashboard(request):
         'today_visits': today_visits,
         'recent_visits': recent_visits,
         'popular_pages': popular_pages,
-        'site_title': 'Westend Corporation Admin',
-        'site_header': 'Westend Corporation',
+        'site_title': 'Acornpensy Exports Admin',
+        'site_header': 'Acornpensy Exports',
         'has_permission': True,
     }
     

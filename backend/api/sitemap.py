@@ -16,7 +16,7 @@ def sitemap_view(request):
     
     <!-- Homepage -->
     <url>
-        <loc>https://westendcorporation.in/</loc>
+        <loc>https://acornpensyexports.com/</loc>
         <lastmod>{lastmod}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -24,7 +24,7 @@ def sitemap_view(request):
     
     <!-- Products Page -->
     <url>
-        <loc>https://westendcorporation.in/products</loc>
+        <loc>https://acornpensyexports.com/products</loc>
         <lastmod>{lastmod}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
@@ -32,7 +32,7 @@ def sitemap_view(request):
     
     <!-- About Page -->
     <url>
-        <loc>https://westendcorporation.in/about</loc>
+        <loc>https://acornpensyexports.com/about</loc>
         <lastmod>{lastmod}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -40,7 +40,7 @@ def sitemap_view(request):
     
     <!-- Contact Page -->
     <url>
-        <loc>https://westendcorporation.in/contact</loc>
+        <loc>https://acornpensyexports.com/contact</loc>
         <lastmod>{lastmod}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -52,7 +52,7 @@ def sitemap_view(request):
     for product in products:
         sitemap_xml += f'''    <!-- Product: {product.name} -->
     <url>
-        <loc>https://westendcorporation.in/product/{product.slug}</loc>
+        <loc>https://acornpensyexports.com/product/{product.slug}</loc>
         <lastmod>{product.updated_at.strftime('%Y-%m-%d')}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

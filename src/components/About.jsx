@@ -122,7 +122,7 @@ const About = () => {
             </div>
 
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              {companyInfo ? companyInfo.description : 'Westend Corporation Pvt. Ltd. is a leading B2B exporter and supplier of premium food products, established in 2010. Headquartered in Delhi\'s Okhla Industrial Area, we operate state-of-the-art processing facilities that adhere to international quality and safety standards.'}
+              {companyInfo ? companyInfo.description : 'Acornpensy Exports Pvt Ltd is a leading B2B exporter and supplier of premium food products, established in 2014. Headquartered in Delhi\'s Okhla Industrial Area, we operate state-of-the-art processing facilities that adhere to international quality and safety standards.'}
             </p>
 
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">

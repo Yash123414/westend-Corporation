@@ -285,24 +285,32 @@ class BrochureViewSet(viewsets.ReadOnlyModelViewSet):
 @csrf_exempt
 def download_catalog_pdf(request):
     """
-    Generate and download the full product catalog PDF.
-    This is a standard Django view to force file download in browsers.
+    Download the product catalog PDF.
+    Serves a pre-generated static file (see `manage.py regenerate_catalog`) so
+    that building the PDF - which embeds a product image per row - never runs
+    on a live web request. Falls back to generating it on demand only if the
+    static file hasn't been created yet.
     """
+    import os
+    from django.conf import settings
+    from django.http import FileResponse, JsonResponse
+
+    catalog_path = os.path.join(settings.MEDIA_ROOT, 'catalog', 'Acornpensy_Exports_Catalog.pdf')
+
     try:
-        from .pdf_generator import generate_catalog_pdf
-        from django.http import FileResponse
-        
-        pdf_buffer = generate_catalog_pdf()
-        
-        response = FileResponse(
-            pdf_buffer, 
-            as_attachment=True, 
-            filename='Westend_Corporation_Catalog.pdf',
+        if not os.path.exists(catalog_path):
+            from .pdf_generator import generate_catalog_pdf
+            os.makedirs(os.path.dirname(catalog_path), exist_ok=True)
+            pdf_buffer = generate_catalog_pdf()
+            with open(catalog_path, 'wb') as f:
+                f.write(pdf_buffer.read())
+
+        return FileResponse(
+            open(catalog_path, 'rb'),
+            as_attachment=True,
+            filename='Acornpensy_Exports_Catalog.pdf',
             content_type='application/pdf'
         )
-        return response
     except Exception as e:
         logging.getLogger(__name__).exception('PDF generation failed')
-        # Return standard JSON error for failures
-        from django.http import JsonResponse
         return JsonResponse({'error': 'Unable to generate catalog.'}, status=500)

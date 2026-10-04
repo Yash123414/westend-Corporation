@@ -106,7 +106,7 @@ const generateSmartKeywords = (product) => {
     ...nameWords, // Individual words
     ...baseKeywords, // Variations
     `${product.brand} ${product.name}`,
-    `Westend ${product.name}`,
+    `Acornpensy ${product.name}`,
     ...nameWords.map(word => `${word} exporter`),
     ...nameWords.map(word => `${word} supplier`),
     ...nameWords.map(word => `buy ${word} bulk`),
@@ -149,7 +149,7 @@ const ProductDetail = () => {
 
         // Create an array of images from the product data
         const productImages = [
-          productData.image || 'https://westendcorporation.in/media/products/placeholder.svg'
+          productData.image || 'https://acornpensyexports.com/media/products/placeholder.svg'
         ];
 
         // Add additional images if they exist
@@ -163,7 +163,7 @@ const ProductDetail = () => {
 
         // If we still have fewer than 3 images, add placeholders
         while (productImages.length < 3) {
-          productImages.push('https://westendcorporation.in/media/products/placeholder.svg');
+          productImages.push('https://acornpensyexports.com/media/products/placeholder.svg');
         }
 
         // Get features from the API or use default features
@@ -198,7 +198,7 @@ const ProductDetail = () => {
           images: productImages,
           features: productFeatures,
           specifications: specifications,
-          brand: productData.brand || productData.vertical_name || 'Westend Organic',
+          brand: productData.brand || productData.vertical_name || 'Acornpensy Organic',
         }
 
         setProduct(enhancedProduct)
@@ -261,18 +261,18 @@ const ProductDetail = () => {
     <div className="min-h-screen bg-gray-50 pt-28">
       {/* SEO Meta Tags and Structured Data */}
       <SEO
-        title={`${product.name} - International Exporter to USA, Canada & Worldwide | Westend Corporation`}
+        title={`${product.name} - International Exporter to USA, Canada & Worldwide | Acornpensy Exports`}
         description={`Premium ${product.name} exporter from India to USA, Canada & worldwide markets. ${product.moq ? `MOQ: ${product.moq}.` : 'Bulk export orders.'} FSSAI certified. ${product.packaging ? `Packaging: ${product.packaging}.` : 'Export-quality packaging.'} Contact for competitive international pricing.`}
         keywords={generateSmartKeywords(product)}
         ogImage={product.image}
         ogType="product"
-        canonical={`https://westendcorporation.in/product/${product.slug}`}
+        canonical={`https://acornpensyexports.com/product/${product.slug}`}
         structuredData={[
           getProductSchema(product),
           getBreadcrumbSchema([
-            { name: 'Home', url: 'https://westendcorporation.in/' },
-            { name: 'Products', url: 'https://westendcorporation.in/products' },
-            { name: product.name, url: `https://westendcorporation.in/product/${product.slug}` }
+            { name: 'Home', url: 'https://acornpensyexports.com/' },
+            { name: 'Products', url: 'https://acornpensyexports.com/products' },
+            { name: product.name, url: `https://acornpensyexports.com/product/${product.slug}` }
           ]),
           getFAQSchema(product)
         ]}
@@ -304,12 +304,12 @@ const ProductDetail = () => {
               {/* Main Image */}
               <div className="aspect-square bg-gray-100 rounded-xl overflow-hidden mb-4">
                 <img
-                  src={product.images && product.images[selectedImage] || product.image || 'https://westendcorporation.in/media/products/placeholder.svg'}
+                  src={product.images && product.images[selectedImage] || product.image || 'https://acornpensyexports.com/media/products/placeholder.svg'}
                   alt={product.name}
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src = 'https://westendcorporation.in/media/products/placeholder.svg';
+                    e.target.src = 'https://acornpensyexports.com/media/products/placeholder.svg';
                   }}
                 />
               </div>
@@ -324,12 +324,12 @@ const ProductDetail = () => {
                       }`}
                   >
                     <img
-                      src={image || product.image || 'https://westendcorporation.in/media/products/placeholder.svg'}
+                      src={image || product.image || 'https://acornpensyexports.com/media/products/placeholder.svg'}
                       alt={`${product.name} - View ${index + 1}`}
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = 'https://westendcorporation.in/media/products/placeholder.svg';
+                        e.target.src = 'https://acornpensyexports.com/media/products/placeholder.svg';
                       }}
                     />
                   </button>
@@ -356,7 +356,7 @@ const ProductDetail = () => {
                     onClick={async () => {
                       const shareData = {
                         title: product.name,
-                        text: `Check out ${product.name} from Westend Corporation - Premium Bulk Exporter`,
+                        text: `Check out ${product.name} from Acornpensy Exports - Premium Bulk Exporter`,
                         url: window.location.href
                       };
 

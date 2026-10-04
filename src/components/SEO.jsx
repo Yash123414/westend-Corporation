@@ -8,12 +8,12 @@ const SEO = ({
     title = 'Acornpensy Exports - Premium International Food Exporter | USA, Canada & Worldwide',
     description = 'Leading international food exporter from India. Shipping to USA, Canada & worldwide. FSSAI certified. Premium groceries, pulses, spices & frozen vegetables. B2B bulk orders. Competitive export pricing since 2014.',
     keywords = 'Acornpensy Exports, Acornpensy Exports India, Acornpensy Exports Delhi, Acornpensy Foods, Acornpensy, food exporters, food exporters India, food exports, worldwide food exporter, international food exporter, global food exporters, food export company, Indian food exporters, food exporters to USA, food exporters to Canada, food exporters worldwide, bulk food exporters, wholesale food exporters, organic food exporters, B2B food exporters, FSSAI certified exporters, spices exporters, pulses exporters, frozen vegetables exporters',
-    ogImage = 'https://acornpensy.com/og-image.jpg',
+    ogImage = 'https://acornpensyexports.com/og-image.jpg',
     ogType = 'website',
     structuredData = null,
     canonical = null
 }) => {
-    const siteUrl = 'https://acornpensy.com'
+    const siteUrl = 'https://acornpensyexports.com'
     const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : siteUrl)
 
     return (
@@ -64,10 +64,10 @@ export const getOrganizationSchema = () => ({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Acornpensy Exports",
-    "url": "https://acornpensy.com",
+    "url": "https://acornpensyexports.com",
     "logo": {
         "@type": "ImageObject",
-        "url": "https://acornpensy.com/logo.png"
+        "url": "https://acornpensyexports.com/logo.png"
     },
     "description": "Premium international food exporter from India",
     "address": {
@@ -81,7 +81,7 @@ export const getOrganizationSchema = () => ({
         "@type": "ContactPoint",
         "telephone": "+91-9599042226",
         "contactType": "Customer Service",
-        "email": "Export@acornpensy.com"
+        "email": "Export@acornpensyexports.com"
     }
 })
 
@@ -91,12 +91,12 @@ export const getWebSiteSchema = () => ({
     "@type": "WebSite",
     "name": "Acornpensy Exports",
     "alternateName": "Acornpensy Foods & Exports",
-    "url": "https://acornpensy.com",
+    "url": "https://acornpensyexports.com",
     "potentialAction": {
         "@type": "SearchAction",
         "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://acornpensy.com/products?search={search_term_string}"
+            "urlTemplate": "https://acornpensyexports.com/products?search={search_term_string}"
         },
         "query-input": "required name=search_term_string"
     },
@@ -115,7 +115,7 @@ export const getProductSchema = (product) => {
     if (product.image) {
         const mainImage = product.image.startsWith('http')
             ? product.image
-            : `https://acornpensy.com${product.image}`
+            : `https://acornpensyexports.com${product.image}`
         productImages.push(mainImage)
     }
 
@@ -123,14 +123,14 @@ export const getProductSchema = (product) => {
     if (product.image_2) {
         const image2 = product.image_2.startsWith('http')
             ? product.image_2
-            : `https://acornpensy.com${product.image_2}`
+            : `https://acornpensyexports.com${product.image_2}`
         productImages.push(image2)
     }
 
     if (product.image_3) {
         const image3 = product.image_3.startsWith('http')
             ? product.image_3
-            : `https://acornpensy.com${product.image_3}`
+            : `https://acornpensyexports.com${product.image_3}`
         productImages.push(image3)
     }
 
@@ -161,7 +161,7 @@ export const getProductSchema = (product) => {
             "priceCurrency": "USD",
             "priceValidUntil": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
             "itemCondition": "https://schema.org/NewCondition",
-            "url": `https://acornpensy.com/product/${product.slug}`,
+            "url": `https://acornpensyexports.com/product/${product.slug}`,
             "priceSpecification": {
                 "@type": "UnitPriceSpecification",
                 "priceType": "https://schema.org/InvoicePrice",
@@ -196,7 +196,7 @@ export const getProductSchema = (product) => {
                 "@type": "Organization",
                 "name": "Acornpensy Exports - International Food Exporter",
                 "description": "Premium food exporter to USA, Canada, and worldwide markets since 2014",
-                "url": "https://acornpensy.com",
+                "url": "https://acornpensyexports.com",
                 "address": {
                     "@type": "PostalAddress",
                     "addressCountry": "IN",

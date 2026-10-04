@@ -10,7 +10,7 @@ from .models import CompanyInfo, Vertical, Product
 
 def generate_catalog_pdf():
     """
-    Generates a PDF catalog for Westend Corporation.
+    Generates a PDF catalog for the company.
     Returns: BytesIO buffer containing the PDF.
     """
     buffer = io.BytesIO()
@@ -19,7 +19,7 @@ def generate_catalog_pdf():
         pagesize=A4,
         rightMargin=40, leftMargin=40,
         topMargin=40, bottomMargin=40,
-        title="Westend Corporation Catalog"
+        title="Acornpensy Exports Catalog"
     )
 
     elements = []
@@ -76,7 +76,7 @@ def generate_catalog_pdf():
 
     # --- Company Info Section ---
     company = CompanyInfo.objects.first()
-    company_name = company.name if company else "Westend Corporation"
+    company_name = company.name if company else "Acornpensy Exports"
     company_tagline = company.tagline if company else "Premium Quality Food Products"
     
     # Logo (if exists) - Resized
@@ -99,7 +99,7 @@ def generate_catalog_pdf():
         contact_text = f"""
         <b>Headquarters:</b> {company.headquarters}<br/>
         <b>Contact:</b> {getattr(company, 'phone', '')} | {getattr(company, 'email', '')}<br/>
-        <b>Website:</b> www.westendcorporation.in
+        <b>Website:</b> www.acornpensyexports.com
         """
         elements.append(Paragraph(contact_text, styles['Normal']))
     
@@ -128,26 +128,35 @@ def generate_catalog_pdf():
         # Prepare Table Data
         data = []
         # Header Row
-        data.append(['Product Name', 'Product Description'])
-        
+        data.append(['Image', 'Product Name', 'Product Description'])
+
         for product in products:
+            # Product image (blank cell if missing/unreadable)
+            p_image = ''
+            if product.image:
+                try:
+                    p_image = ReportLabImage(product.image.path, width=1.1*inch, height=1.1*inch, kind='proportional')
+                except Exception:
+                    p_image = ''
+
             # Clean Name & Description
             p_name = Paragraph(product.name, product_name_style)
-            
+
             # Use Description field directly as requested
             # Use generic text if description is empty
             desc_text = product.description if product.description else "No description available."
             p_desc = Paragraph(desc_text, product_desc_style)
-            
-            data.append([p_name, p_desc])
+
+            data.append([p_image, p_name, p_desc])
 
         # Style the Table
-        col_widths = [2.5*inch, 4.5*inch]
+        col_widths = [1.3*inch, 2*inch, 3.9*inch]
         t = Table(data, colWidths=col_widths, repeatRows=1)
         t.setStyle(TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#f3f4f6')),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
             ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+            ('ALIGN', (0, 0), (0, -1), 'CENTER'),
             ('VALIGN', (0, 0), (-1, -1), 'TOP'),
             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),

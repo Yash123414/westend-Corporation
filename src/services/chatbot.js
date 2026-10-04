@@ -1,5 +1,5 @@
 // Cost-effective chatbot API service - CACHING DISABLED
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://westendcorporation.in/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://acornpensyexports.com/api';
 
 // Caching disabled to prevent issues
 const localCache = new Map();
@@ -116,21 +116,21 @@ class ChatbotAPI {
   // Generate local responses for common intents (FREE)
   generateLocalResponse(intent, message) {
     const responses = {
-      greeting: "Hello! Welcome to Westend Corporation. I'm here to help you find information about our products, services, or answer any questions you might have. What can I assist you with today?",
-      
-      contact_info: "You can reach us at:\n\n📞 Phone: +91 93119 33481\n📧 Email: support@westendcorporation.in\n📍 Address: X-57, Phase 2, Okhla, New Delhi - 110020\n\nOur business hours are Monday to Saturday, 9 AM to 6 PM.",
-      
-      about_company: "Westend Corporation is a leading international food exporter from India, specializing in premium quality food products including groceries, pulses, spices, and frozen vegetables. We export to USA, Canada, and worldwide markets with FSSAI certification.",
-      
+      greeting: "Hello! Welcome to Acornpensy Exports. I'm here to help you find information about our products, services, or answer any questions you might have. What can I assist you with today?",
+
+      contact_info: "You can reach us at:\n\n📞 Phone: +91 9599042226\n📧 Email: Export@acornpensy.com\n📍 Address: B-106, Phase-1, Okhla, New Delhi - 110020\n\nOur business hours are Monday to Saturday, 9 AM to 6 PM.",
+
+      about_company: "Acornpensy Exports is a leading international food exporter from India, specializing in premium quality food products including groceries, pulses, spices, and frozen vegetables. We export to USA, Canada, and worldwide markets with FSSAI certification.",
+
       shipping: "We export products worldwide with reliable shipping and logistics. Our products reach USA, Canada, and many other countries with proper documentation and quality assurance. Delivery times vary by destination but typically range from 7-21 days.",
-      
-      quality: "Quality is our top priority at Westend Corporation. We maintain strict quality control from sourcing to packaging, ensuring only the best products reach our customers. We are FSSAI, ISO, and HACCP certified.",
-      
-      certification: "Westend Corporation maintains various quality certifications including:\n\n• FSSAI Certification\n• ISO Certification\n• HACCP Compliance\n• Organic India Certification\n• USDA Organic\n\nAll our products meet strict international quality standards.",
-      
+
+      quality: "Quality is our top priority at Acornpensy Exports. We maintain strict quality control from sourcing to packaging, ensuring only the best products reach our customers. We are FSSAI, ISO, and HACCP certified.",
+
+      certification: "Acornpensy Exports maintains various quality certifications including:\n\n• FSSAI Certification\n• ISO Certification\n• HACCP Compliance\n• Organic India Certification\n• USDA Organic\n\nAll our products meet strict international quality standards.",
+
       categories: "We offer several main product categories:\n\n🌾 **Groceries & Pulses** - Premium quality grains and lentils\n🥬 **Frozen Vegetables** - Fresh frozen produce\n📦 **Processed Foods** - Ready-to-eat and value-added products\n\nWhich category interests you?",
-      
-      goodbye: "Thank you for contacting Westend Corporation! Feel free to reach out anytime if you need more information. Have a great day!",
+
+      goodbye: "Thank you for contacting Acornpensy Exports! Feel free to reach out anytime if you need more information. Have a great day!",
       
       pricing: "For pricing information, I can help you get a quote. Could you please tell me which products you're interested in and the quantity you need? Our pricing is competitive and varies based on order quantity and destination.",
       
@@ -211,7 +211,7 @@ class ChatbotAPI {
       // Fallback response (FREE)
       const fallbackResponse = {
         message: {
-          content: "I'm having trouble connecting right now. You can:\n\n• Try asking in a different way\n• Contact us at support@westendcorporation.in\n• Call us at +91 93119 33481\n\nI'll be back to help you shortly!",
+          content: "I'm having trouble connecting right now. You can:\n\n• Try asking in a different way\n• Contact us at Export@acornpensy.com\n• Call us at +91 9599042226\n\nI'll be back to help you shortly!",
           message_type: 'bot',
           timestamp: new Date().toISOString(),
           response_data: {},

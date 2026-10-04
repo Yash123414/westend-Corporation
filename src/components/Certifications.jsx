@@ -9,7 +9,7 @@ const Certifications = () => {
   useEffect(() => {
     const fetchCertifications = async () => {
       try {
-        const response = await fetch('https://westendcorporation.in/api/certifications/')
+        const response = await fetch('https://acornpensyexports.com/api/certifications/')
         const data = await response.json()
         setCertifications(data)
       } catch (err) {

@@ -46,7 +46,7 @@ if not SECRET_KEY:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if os.environ.get('ALLOWED_HOSTS') else ['157.173.221.140', 'westendcorporation.in', 'www.westendcorporation.in']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if os.environ.get('ALLOWED_HOSTS') else ['157.173.221.140', 'westendcorporation.in', 'www.westendcorporation.in', 'acornpensyexports.com', 'www.acornpensyexports.com']
 
 
 # Application definition
@@ -212,6 +212,10 @@ CSRF_TRUSTED_ORIGINS = [
     "http://www.westendcorporation.in",
     "https://westendcorporation.in",
     "https://www.westendcorporation.in",
+    "http://acornpensyexports.com",
+    "http://www.acornpensyexports.com",
+    "https://acornpensyexports.com",
+    "https://www.acornpensyexports.com",
 ]
 
 # Email settings (if configured)

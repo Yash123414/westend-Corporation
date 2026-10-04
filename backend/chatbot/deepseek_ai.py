@@ -1,5 +1,5 @@
 """
-DeepSeek AI Integration Service for Westend Corporation Chatbot
+DeepSeek AI Integration Service for Acornpensy Exports Chatbot
 Cost-optimized AI responses with database integration
 """
 
@@ -74,16 +74,16 @@ class DeepSeekAIService:
             
             # Get company info
             company_info = {
-                "name": "Westend Corporation",
+                "name": "Acornpensy Exports",
                 "business": "International food export from India",
-                "address": "X-57, Phase 2, Okhla, New Delhi - 110020",
-                "phone": "+91 93119 33481",
+                "address": "B-106, Phase-1, Okhla, New Delhi 110020",
+                "phone": "+91 9599042226",
                 "email": "support@westendcorporation.in",
                 "hours": "Monday to Saturday, 9 AM to 6 PM"
             }
-            
+
             context = f"""
-WESTEND CORPORATION DATABASE CONTEXT:
+ACORNPENSY EXPORTS DATABASE CONTEXT:
 
 COMPANY INFO:
 - Name: {company_info['name']}
@@ -183,7 +183,7 @@ RESPONSE GUIDELINES:
         
         try:
             # Prepare system message with database context
-            system_message = f"""You are a helpful assistant for Westend Corporation, an international food export company based in India.
+            system_message = f"""You are a helpful assistant for Acornpensy Exports, an international food export company based in India.
 
 {self.get_database_context()}
 
@@ -283,16 +283,16 @@ IMPORTANT:
         
         # Handle common typos and basic patterns
         if any(word in message_lower for word in ['address', 'location', 'where']):
-            return f"You can find us at:\n\n📍 **Address**: X-57, Phase 2, Okhla, New Delhi - 110020\n📞 **Phone**: +91 93119 33481\n📧 **Email**: support@westendcorporation.in\n\nWe're open Monday to Saturday, 9 AM to 6 PM."
-        
+            return f"You can find us at:\n\n📍 **Address**: B-106, Phase-1, Okhla, New Delhi 110020\n📞 **Phone**: +91 9599042226\n📧 **Email**: support@westendcorporation.in\n\nWe're open Monday to Saturday, 9 AM to 6 PM."
+
         if any(word in message_lower for word in ['contact', 'phone', 'email', 'call']):
-            return f"Here's how to reach us:\n\n📞 **Phone**: +91 93119 33481\n📧 **Email**: support@westendcorporation.in\n📍 **Address**: X-57, Phase 2, Okhla, New Delhi - 110020\n\n⏰ **Business Hours**: Monday to Saturday, 9 AM to 6 PM"
-        
+            return f"Here's how to reach us:\n\n📞 **Phone**: +91 9599042226\n📧 **Email**: support@westendcorporation.in\n📍 **Address**: B-106, Phase-1, Okhla, New Delhi 110020\n\n⏰ **Business Hours**: Monday to Saturday, 9 AM to 6 PM"
+
         if any(word in message_lower for word in ['hello', 'hi', 'hey']):
-            return "Hello! Welcome to Westend Corporation! 🌾\n\nI'm here to help you with:\n• **Products**: Rice, spices, dairy, baked goods\n• **Contact**: Phone, email, address\n• **Pricing**: Bulk export quotes\n• **Orders**: How to place orders\n\nWhat would you like to know?"
-        
+            return "Hello! Welcome to Acornpensy Exports! 🌾\n\nI'm here to help you with:\n• **Products**: Rice, spices, dairy, baked goods\n• **Contact**: Phone, email, address\n• **Pricing**: Bulk export quotes\n• **Orders**: How to place orders\n\nWhat would you like to know?"
+
         # General fallback
-        return "I'm here to help with Westend Corporation's products and services! You can ask me about:\n\n• **Products**: \"show me rice products\", \"spices\", \"ghee\"\n• **Contact**: \"phone number\", \"address\"\n• **Pricing**: \"how much for basmati rice\"\n• **Orders**: \"how to place bulk order\"\n\nWhat specific information are you looking for?"
+        return "I'm here to help with Acornpensy Exports' products and services! You can ask me about:\n\n• **Products**: \"show me rice products\", \"spices\", \"ghee\"\n• **Contact**: \"phone number\", \"address\"\n• **Pricing**: \"how much for basmati rice\"\n• **Orders**: \"how to place bulk order\"\n\nWhat specific information are you looking for?"
 
 
 # Global instance
